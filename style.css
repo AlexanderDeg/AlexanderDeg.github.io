@@ -1,0 +1,117 @@
+body {
+    background-color: #121713;
+    background-image: radial-gradient(#121713, #232e26);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+header {
+    position: absolute;
+    background-color: #232e26;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+
+}
+
+h1 {
+    font-size: x-large;
+    text-align: center;
+    margin: auto;
+}
+
+a {
+    margin: auto;
+    color: #44439c;
+}
+
+.clickable {
+    color:#44439c;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navbar-button {
+  background-color: #334237;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color:whitesmoke;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  width: auto;
+}
+
+.navbar-button:hover {
+  background-color: #374151;
+}
+
+.navbar-button:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .navbar-button {
+    padding: .75rem 1.5rem;
+  }
+}
+
+.button-container {
+    position: relative;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.title-container {
+    display: flex;
+    margin: auto;
+    float: left;
+    background-color: #334237;
+    color: whitesmoke;
+    width: 25%;
+    height: 100%;
+    align-items: center;
+}
+
+.header-flex {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    height: 100%;
+}
+
+.terminal-div {
+    position: relative;
+    padding: 4px;
+}
+
+.terminal-p {
+    color: #c2c2c2;
+    margin: 0;
+}
+
+.scroll-container {
+    position: absolute;
+    bottom: 8px;
+    top: 80px;
+    right: 8px;
+    left: 8px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.prompt {
+    color: green;
+}
