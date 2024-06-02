@@ -3,6 +3,7 @@ body {
     background-image: radial-gradient(#121713, #232e26);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+	overflow: hidden;
 }
 
 header {
@@ -24,6 +25,16 @@ h1 {
 a {
     margin: auto;
     color: #44439c;
+}
+
+strong {
+	color:greenyellow;
+}
+
+.project-img {
+	padding: 16px;
+	max-width: 50%;
+	float: right;
 }
 
 .clickable {
@@ -90,8 +101,10 @@ a {
     height: 100%;
 }
 
-.terminal-div {
+.terminal-flex {
     position: relative;
+	left: 8px;
+	height: auto;
     padding: 4px;
 }
 
@@ -107,11 +120,19 @@ a {
     right: 8px;
     left: 8px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
+	overflow-x: hidden;
+	min-height: min-content;
 }
 
 .prompt {
     color: green;
+}
+
+.spacer {
+	content: "";
+	flex: 0 0 100%;
+	visibility: hidden;
 }
