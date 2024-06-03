@@ -32,6 +32,9 @@ function createMessageImg(src, width, str = '')
 	img.classList.add("project-img")
 	img.src = src
 	img.width = width
+	img.onload = function (){
+		scrollContainer.scrollTop = scrollContainer.scrollHeight
+	}
 	messageDiv.appendChild(img)
     const messageParagraph = document.createElement('p')
     messageParagraph.classList.add('terminal-p')
@@ -81,32 +84,24 @@ async function onProjectsClick()
         return 1
     blocking = true
     await writeMessage('ls ./projects')
-    createMessage("<a href='https://github.com/AlexanderDeg/ft_irc'>ft_irc</a> : An Internet Relay Chat client written in C++")
-    createMessage("<a href='https://github.com/kaseypsbrice/Minishell'>minishell</a> : Linux shell program based on bash written in C")
-
-    createMessage()
-	await new Promise(r => setTimeout(r, 20))
-	scrollContainer.scrollTop = scrollContainer.scrollHeight
-    blocking = false 
-}
-
-async function onGodotClick()
-{
-	if (blocking)
-		return 1
-	blocking = true
-	await writeMessage('ls ./godot_projects')
-
+	createMessage("<strong>Godot Projects</strong><br><br>")
 	createMessageImg("media/bullet_hell.gif", 800, "<strong>Online coop action rogue-like: </strong><br><br>Developed in less than 2 months (unfinished). \
 	Features a simplex noise-based level generation system with levels that expand and populate themselves with more enemies as the players \
 	progress.<br><br>Bullet hell gameplay with bullet modifiers as a core mechanic. The modifiers, as shown in the bottom left, include: piercing, \
 	double shot, bouncing bullets, large bullets, homing bullets, boomerang bullets, etc.<br><br>All assets created by me.")
 	createMessageImg("media/endless.gif", 800, "<strong>Endless rogue-lite: </strong><br><br>Prototype of a game in the endless rogue-lite genre popularized \
 	by Vampire Survivors.<br><br>Features a 1-bit art style, wave-based gameplay and unique upgrade synergies.<br><br>All assets created by me.</p>")
-	createMessage()
-	await new Promise(r => setTimeout(r, 20))
+	createMessageImg("media/typing.gif", 800, "<strong>Typing game: </strong><br><br>Somewhat comedic representation of what studying at 42 \
+	is like.<br><br>Made in 1 week for a game jam hosted by students at 42 Adelaide.<br><br>CRT shader by pend00.")
+	createMessageImg("media/card.gif", 800, "<strong>Card rogue-like prototype: </strong><br><br>Short card rogue-like prototype made within \
+	a few days.<br><br>Dice by jayditya2009 at sketchfab.com<br>Font by datagoblin at itch.io<br>Slash effect by Sangoro at itch.io<br>\
+	Tiles by RummyMakes at itch.io<br>Slimes by Holder at itch.io<br>Knight by Sven Thole at itch.io")
+	createMessage("<br><br><strong>42 Projects</strong><br><br>")
+    createMessage("<a href='https://github.com/AlexanderDeg/ft_irc'>ft_irc</a> : An Internet Relay Chat client written in C++")
+    createMessage("<a href='https://github.com/kaseypsbrice/Minishell'>minishell</a> : Linux shell program based on bash written in C")
+    createMessage()
 	scrollContainer.scrollTop = scrollContainer.scrollHeight
-	blocking = false
+    blocking = false 
 }
 
 async function onAboutMeClick()
@@ -115,15 +110,29 @@ async function onAboutMeClick()
         return 1
     blocking = true
     await writeMessage('cat README')
-    createMessage("Hi, I'm Alex. I am a passionate programmer who has been self-teaching programming for over 10 years. \
-    I am most interested in game development, software development and fullstack development. \
-    I began my journey with Gamemaker Studio and Godot before enrolling at 42 Adelaide, a self-paced, peer-driven programming school. \
-    During my time at 42 I completed a variety of <span class=\"clickable\" onclick=\"onProjectsClick()\">projects</span> further sharpening my programming and soft skills. \
-    I hope to work in a workplace that challenges me and allows me to expand my knowledge of my interest areas.")
+    createMessage("Hi, I'm Alex. I am a programmer and game devloper who has been self-teaching programming for over 10 years. \
+    While my principle interest is in game programming/development, I am also interested in software and full stack web development.<br><br>\
+    I began my coding journey with Gamemaker Studio and after a few years, I moved onto Godot when I found the engine a little lacking. \
+	I came across an oppurtinity to get some more formal programming experience by studying at 42 Adelaide and took it. \
+	There, through many individual and group projects, I gained experience with Linux, C, C++, JavaScript, HTML, CSS, Docker, Nginx, \
+	SQL and Ruby.<br><br>I hope to find a game development team or software/web development position where I can let my problem solving and \
+	system design skills shine.<br><br>Please take a look at <span class=\"clickable\" onclick=\"onProjectsClick()\">my work</span>.")
     createMessage()
-	await new Promise(r => setTimeout(r, 20))
 	scrollContainer.scrollTop = scrollContainer.scrollHeight
     blocking = false
+}
+
+async function onContactMeClick()
+{
+	if (blocking)
+		return 1
+	blocking = true
+	await writeMessage('cat CONTACTME')
+	createMessage('email: <a href="mailto:alexdeg162000@gmail.com">alexdeg162000@gmail.com</a><br>\
+	discord: <a href="https://discordapp.com/users/216186343963885568">Hamazon</a>')
+	createMessage()
+	scrollContainer.scrollTop = scrollContainer.scrollHeight
+	blocking = false
 }
 
 onPageLoad()
