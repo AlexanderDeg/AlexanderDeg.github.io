@@ -99,6 +99,10 @@ async function onProjectsClick()
 	createMessage("<br><br><strong>42 Projects</strong><br><br>")
     createMessage("<a href='https://github.com/AlexanderDeg/ft_irc'>ft_irc</a> : An Internet Relay Chat client written in C++")
     createMessage("<a href='https://github.com/kaseypsbrice/Minishell'>minishell</a> : Linux shell program based on bash written in C")
+    createMessage("<a href='https://github.com/kaseypsbrice/ft_transcendence'>ft_transcendence</a> : \
+    Online multiplayer pong and snake games with secure profiles, friends, live chat and tournaments written in Ruby, Javascript, HTML, CSS, SQL and \
+    utilizing Nginx and Docker")
+    createMessage("<a href='https://github.com/AlexanderDeg/inception/tree/master'>inception</a> : Automated Wordpress deployment with docker-compose")
     createMessage()
 	scrollContainer.scrollTop = scrollContainer.scrollHeight
     blocking = false 
