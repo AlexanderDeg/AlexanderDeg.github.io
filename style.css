@@ -134,6 +134,6 @@ strong {
 
 .spacer {
 	content: "";
-	flex: 0 0 800px;
+	flex: 0 0 100%;
 	visibility: hidden;
 }
