@@ -88,11 +88,17 @@ async function onProjectsClick()
 	createMessageImg("media/card.gif", 800, "<strong>Card rogue-like prototype: </strong><br><br>Short card rogue-like prototype made within \
 	a few days.<br><br>Dice by jayditya2009 at sketchfab.com<br>Font by datagoblin at itch.io<br>Slash effect by Sangoro at itch.io<br>\
 	Tiles by RummyMakes at itch.io<br>Slimes by Holder at itch.io<br>Knight by Sven Thole at itch.io")
+	createMessageImg("media/horror.gif", 800, "<strong>Cult of Shadows: </strong><br><br>Atmospheric horror submission to \
+	<a href='https://johnny-daniel.itch.io/cult-of-shadows'>Pirate Software Game Jam 15</a><br><br>This game uses both sound and light as core mechanics. \
+	It includes a tree-based room system for pathfinding and door-breaking as well as dynamic sound systems for atmosphere.<br><br>Created in two weeks with myself as the primary programmer.")
 	createMessageImg("media/frog.gif", 800, "<strong>Frog Rogue-like: </strong><br><br>4th place submission to <a href='https://itch.io/jam/godot-wild-jam-70/rate/2786902'>Godot Wild Jam 40</a> \
 	<br><br>The game jam was one week in length with the theme \"Folklore\". 5 people worked on this game with myself as the primary programmer.")
 	createMessage("<br><br><strong>42 Projects</strong><br><br>")
     createMessage("<a href='https://github.com/AlexanderDeg/ft_irc'>ft_irc</a> : An Internet Relay Chat client written in C++")
     createMessage("<a href='https://github.com/kaseypsbrice/Minishell'>minishell</a> : Linux shell program based on bash written in C")
+	createMessage("<a href='https://github.com/kaseypsbrice/ft_transcendence'>ft_transcendence</a> : Online multiplayer pong and snake games \
+	in a single-page web application. Features include user profiles with secure login over https, a live chat, profile pictures, friends list and the ability to play \
+	on the command line through a websocket API.<br>Disclaimer: this project was created on a tight deadline of ~1 month so the code desperately needs a refactor.")
     createMessage()
 	scrollContainer.scrollTop = scrollContainer.scrollHeight
     blocking = false 
