@@ -2,7 +2,7 @@ const promptMessage = "alex@alex $~"
 const promptLength = 41
 const scrollContainer = document.querySelector('.scroll-container')
 let currentParagraph = null
-let blocking = false
+let blocking = false // Listen I don't have much js experience let it slide
 
 function createMessage(str = '')
 {
@@ -16,10 +16,6 @@ function createMessage(str = '')
         messageParagraph.innerHTML = `<span class="prompt">${promptMessage}</span> ${str}`
     messageDiv.appendChild(messageParagraph)
     scrollContainer.appendChild(messageDiv)
-    //if (currentParagraph != null && str.length == 0)
-    //{
-    //    currentParagraph.innerHTML = currentParagraph.innerHTML.substr(promptLength)
-    //}
 	scrollContainer.scrollTop = scrollContainer.scrollHeight
     currentParagraph = messageParagraph
 }
@@ -44,10 +40,6 @@ function createMessageImg(src, width, str = '')
         messageParagraph.innerHTML = `<span class="prompt">${promptMessage}</span> ${str}`
     messageDiv.appendChild(messageParagraph)
     scrollContainer.appendChild(messageDiv)
-    //if (currentParagraph != null && str.length == 0)
-    //{
-    //    currentParagraph.innerHTML = currentParagraph.innerHTML.substr(promptLength)
-    //}
 	scrollContainer.scrollTop = scrollContainer.scrollHeight
     currentParagraph = messageParagraph
 }
@@ -96,6 +88,8 @@ async function onProjectsClick()
 	createMessageImg("media/card.gif", 800, "<strong>Card rogue-like prototype: </strong><br><br>Short card rogue-like prototype made within \
 	a few days.<br><br>Dice by jayditya2009 at sketchfab.com<br>Font by datagoblin at itch.io<br>Slash effect by Sangoro at itch.io<br>\
 	Tiles by RummyMakes at itch.io<br>Slimes by Holder at itch.io<br>Knight by Sven Thole at itch.io")
+	createMessageImg("media/frog.gif", 800, "<strong>Frog Rogue-like: </strong><br><br>4th place submission to <a href='https://itch.io/jam/godot-wild-jam-70/rate/2786902'>Godot Wild Jam 40</a> \
+	<br><br>The game jam was one week in length with the theme \"Folklore\". 5 people worked on this game with myself as the primary programmer.")
 	createMessage("<br><br><strong>42 Projects</strong><br><br>")
     createMessage("<a href='https://github.com/AlexanderDeg/ft_irc'>ft_irc</a> : An Internet Relay Chat client written in C++")
     createMessage("<a href='https://github.com/kaseypsbrice/Minishell'>minishell</a> : Linux shell program based on bash written in C")
