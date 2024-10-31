@@ -120,11 +120,11 @@ strong {
     right: 8px;
     left: 8px;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
-    overflow-y: auto;
-	overflow-x: hidden;
-	min-height: min-content;
+    overflow-y: scroll; /* Use scroll instead of auto */
+    overflow-x: hidden;
+    min-height: 0; /* Ensure this is set to 0 */
+    flex-grow: 1;  /* Make sure it grows as needed */
 }
 
 .prompt {
