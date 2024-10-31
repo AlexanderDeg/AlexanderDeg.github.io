@@ -119,6 +119,7 @@ strong {
     top: 80px;
     right: 8px;
     left: 8px;
+    max-height: calc(100% - 88px);
     display: flex;
     flex-direction: column;
     overflow-y: scroll; /* Use scroll instead of auto */

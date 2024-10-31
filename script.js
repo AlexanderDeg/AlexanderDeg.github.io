@@ -110,10 +110,10 @@ async function onAboutMeClick()
         return 1
     blocking = true
     await writeMessage('cat README')
-    createMessage("Hi, I'm Alex. I am a programmer and game devloper who has been self-teaching programming for over 10 years. \
+    createMessage("Hi, I'm Alex. I am a programmer and game developer who has been self-teaching programming for over 10 years. \
     While my principle interest is in game programming/development, I am also interested in software and full stack web development.<br><br>\
     I began my coding journey with Gamemaker Studio and after a few years, I moved onto Godot when I found the engine a little lacking. \
-	I came across an oppurtinity to get some more formal programming experience by studying at 42 Adelaide and took it. \
+	I came across an opportunity to get some more formal programming experience by studying at 42 Adelaide and took it. \
 	There, through many individual and group projects, I gained experience with Linux, C, C++, JavaScript, HTML, CSS, Docker, Nginx, \
 	SQL and Ruby.<br><br>I hope to find a game development team or software/web development position where I can let my problem solving and \
 	system design skills shine.<br><br>Please take a look at <span class=\"clickable\" onclick=\"onProjectsClick()\">my work</span>.")
